@@ -29,6 +29,8 @@ This project implements a Vendor Management System using Django and Django REST 
     
 ## Installation
 
+Open Terminal and follow these steps:
+
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/KarunShaji/VendorManagementSystem-API
@@ -56,15 +58,27 @@ This project implements a Vendor Management System using Django and Django REST 
 
 ## Access the API Endpoints in Postman:
 
-1. Import the provided Postman collection by clicking the following button:
+## Accessing the API Endpoints in Postman
 
-   [![View Postman Documentation](https://run.pstmn.io/button.svg)](https://documenter.getpostman.com/view/33222895/2sA3JFA4br)
+Follow these steps to interact with the API using Postman:
 
-2. Once the server is running, you can access all the API endpoints documented in the collection using Postman.
+1. **Import the provided Postman collection:**
+   - Click on the following button to view the Postman documentation:
+   
+     [![Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/karunshaji/workspace/vendor-management-system/collection/33222895-bbc47f22-27d2-4331-a4e2-86403e2055c6)
 
-3. Make sure to set up your environment variables such as `http://localhost:8000/` for the base URL.
+2. **Set up the environment in Postman:**
+   - After importing the collection, set up your environment variables, such as the base URL (`http://localhost:8000/`).
 
-4. You can then send requests to the desired endpoints and explore the functionalities of the Vendor Management System API.
+3. **Obtain an authentication token:**
+   - Use the provided superuser account credentials to log in and obtain an authentication token.
+
+4. **Authenticate requests:**
+   - Set the obtained authentication token in the Authorization header of your requests to authenticate.
+
+5. **Send requests using example data:**
+   - Explore the endpoints documented in the collection and use the example data provided in the documentation as test inputs.
+
 
 ## Backend Logic for Performance Metrics
 
