@@ -26,44 +26,46 @@ This project implements a Vendor Management System using Django and Django REST 
    - Calculate performance metrics such as on-time delivery rate, quality rating average, average response time, and fulfillment rate.
    - API Endpoint:
      - `GET /api/vendors/{vendor_id}/performance`: Retrieve a vendor's performance metrics.
+    
+## Installation
 
-## Data Models
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/KarunShaji/VendorManagementSystem-API
+    ```
+2. **Navigate to the project directory:**
+   ```bash
+   cd VendorManagementSystem-API
+   ```
+   
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. **Run migrations:**
+   ```bash
+   python manage.py makemigrations
+   python manage.py migrate
+   ```
+   
+5. Run the development server:
 
-1. **Vendor Model**
-   - Stores vendor information including performance metrics.
-   - Fields:
-     - `name`: Vendor's name.
-     - `contact_details`: Contact information of the vendor.
-     - `address`: Physical address of the vendor.
-     - `vendor_code`: A unique identifier for the vendor.
-     - `on_time_delivery_rate`: Percentage of on-time deliveries.
-     - `quality_rating_avg`: Average rating of quality based on purchase orders.
-     - `average_response_time`: Average time taken to acknowledge purchase orders.
-     - `fulfillment_rate`: Percentage of purchase orders fulfilled successfully.
+    ```bash
+    python manage.py runserver
+    ```
 
-2. **Purchase Order (PO) Model**
-   - Captures details of each purchase order and is used to calculate performance metrics.
-   - Fields:
-     - `po_number`: Unique number identifying the PO.
-     - `vendor`: Link to the Vendor model.
-     - `order_date`: Date when the order was placed.
-     - `delivery_date`: Expected or actual delivery date of the order.
-     - `items`: Details of items ordered.
-     - `quantity`: Total quantity of items in the PO.
-     - `status`: Current status of the PO.
-     - `quality_rating`: Rating given to the vendor for this PO (nullable).
-     - `issue_date`: Timestamp when the PO was issued to the vendor.
-     - `acknowledgment_date`: Timestamp when the vendor acknowledged the PO.
+## Access the API Endpoints in Postman:
 
-3. **Historical Performance Model** (Optional)
-   - Stores historical data on vendor performance for trend analysis.
-   - Fields:
-     - `vendor`: Link to the Vendor model.
-     - `date`: Date of the performance record.
-     - `on_time_delivery_rate`: Historical record of the on-time delivery rate.
-     - `quality_rating_avg`: Historical record of the quality rating average.
-     - `average_response_time`: Historical record of the average response time.
-     - `fulfillment_rate`: Historical record of the fulfillment rate.
+1. Import the provided Postman collection by clicking the following button:
+
+   [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/33222895-2sA3JFA4br)
+
+2. Once imported, you can access all the API endpoints documented in the collection.
+
+3. Make sure to set up your environment variables such as `http://localhost:8000/` for the base URL.
+
+4. You can then send requests to the desired endpoints and explore the functionalities of the Vendor Management System API.
+
 
 ## Backend Logic for Performance Metrics
 
@@ -73,13 +75,6 @@ The backend logic calculates various performance metrics based on interactions r
 - **Average Response Time**
 - **Fulfillment Rate**
 
-## API Endpoint Implementation
-
-- **Vendor Performance Endpoint** (`GET /api/vendors/{vendor_id}/performance`)
-  - Retrieves the calculated performance metrics for a specific vendor.
-
-- **Update Acknowledgment Endpoint** (`POST /api/purchase_orders/{po_id}/acknowledge`)
-  - Updates acknowledgment date and triggers the recalculation of average response time.
 
 ## Additional Technical Considerations
 
