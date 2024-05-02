@@ -58,14 +58,13 @@ This project implements a Vendor Management System using Django and Django REST 
 
 1. Import the provided Postman collection by clicking the following button:
 
-   [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/33222895-2sA3JFA4br)
+   [![View Postman Documentation](https://run.pstmn.io/button.svg)](https://documenter.getpostman.com/view/33222895/2sA3JFA4br)
 
-2. Once imported, you can access all the API endpoints documented in the collection.
+2. Once the server is running, you can access all the API endpoints documented in the collection using Postman.
 
 3. Make sure to set up your environment variables such as `http://localhost:8000/` for the base URL.
 
 4. You can then send requests to the desired endpoints and explore the functionalities of the Vendor Management System API.
-
 
 ## Backend Logic for Performance Metrics
 
