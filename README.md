@@ -71,10 +71,11 @@ Follow these steps to interact with the API using Postman:
    - After importing the collection, set up your environment variables, such as the base URL (`http://localhost:8000/`).
 
 3. **Obtain an authentication token:**
-   - Use the provided superuser account credentials to log in and obtain an authentication token.
+   - Use the provided credentials/use your own details to log in and obtain an authentication token.
 
 4. **Authenticate requests:**
    - Set the obtained authentication token in the Authorization header of your requests to authenticate.
+   - Example Authorization : Token (obtained token)
 
 5. **Send requests using example data:**
    - Explore the endpoints documented in the collection and use the example data provided in the documentation as test inputs.
